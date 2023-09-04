@@ -9,7 +9,7 @@ This repository provides a number of test scenes for LuxRender. Each scene inclu
 cherub-scene
 ```
 
-The "Cherub" scene demonstrates bidirectional path tracing with metropolis sampling.
+The "Cherub" scene demonstrates stochastic progressive photon mapping with Halton sampling.
 
 ![Cherub](cherub-scene/cherub.jpeg)
 
