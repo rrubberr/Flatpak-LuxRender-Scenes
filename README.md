@@ -18,21 +18,6 @@ Author: Jason Brenneman // rrubberr
 ```
 
 
-# Chrono
-
-```
-chrono-scene
-```
-
-The "Chrono" scene demonstrates stochastic progressive photon mapping.
-
-![Chrono](chrono-scene/chrono.jpeg)
-
-```
-Author: Jason Brenneman // rrubberr
-```
-
-
 # Pelegrino
 
 The "Cherub" scene demonstrates bidirectional path tracing with metropolis sampling.
