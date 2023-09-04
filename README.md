@@ -20,7 +20,7 @@ Author: Jason Brenneman // rrubberr
 
 # Pelegrino
 
-The "Cherub" scene demonstrates bidirectional path tracing with metropolis sampling.
+The "Pelegrino" scene demonstrates bidirectional path tracing with metropolis sampling.
 
 ```
 pelegrino-scene
