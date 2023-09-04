@@ -3,7 +3,7 @@
 This repository provides a number of test scenes for LuxRender. Each scene includes the blend file, as well as an lxs scene that can be immediately loaded into LuxRender.
 
 
-#Cherub
+# Cherub
 
 ```
 cherub-scene
@@ -18,7 +18,7 @@ Author: Jason Brenneman // rrubberr
 ```
 
 
-#Chrono
+# Chrono
 
 ```
 chrono-scene
@@ -33,7 +33,7 @@ Author: Jason Brenneman // rrubberr
 ```
 
 
-#Pelegrino
+# Pelegrino
 
 The "Cherub" scene demonstrates bidirectional path tracing with metropolis sampling.
 
