@@ -1,0 +1,120 @@
+# Main Scene File
+
+Renderer "sppm"
+
+Sampler "lowdiscrepancy"
+	"integer pixelsamples" [1]
+	"string pixelsampler" ["hilbert"]
+	"bool noiseaware" ["false"]
+
+Accelerator "sqbvh"
+	"integer maxprimsperleaf" [4]
+	"integer fullsweepthreshold" [16]
+	"integer skipfactor" [1]
+
+SurfaceIntegrator "sppm"
+	"integer maxeyedepth" [16]
+	"integer maxphotondepth" [16]
+	"integer photonperpass" [10000000]
+	"integer hitpointperpass" [0]
+	"float startradius" [2.000000000000000]
+	"float alpha" [0.949999988079071]
+	"bool includeenvironment" ["true"]
+	"bool directlightsampling" ["true"]
+	"bool storeglossy" ["false"]
+	"bool useproba" ["true"]
+	"integer wavelengthstratificationpasses" [32]
+	"string lookupaccel" ["parallelhashgrid"]
+	"float parallelhashgridspare" [32.000000000000000]
+	"string pixelsampler" ["hilbert"]
+	"string photonsampler" ["halton"]
+
+VolumeIntegrator "single"
+
+PixelFilter "gaussian"
+	"float xwidth" [3.299999952316284]
+	"float ywidth" [3.299999952316284]
+	"float alpha" [2.000000000000000]
+
+LookAt 3.921864 -8.471877 0.579038 3.691868 -8.030060 0.622616 0.020122 -0.038654 0.498097
+
+Camera "perspective"
+	"float fov" [21.320696748930555]
+	"float screenwindow" [-1.000000000000000 1.000000000000000 -0.586666668454806 0.746666664878527]
+	"bool autofocus" ["false"]
+	"float shutteropen" [0.000000000000000]
+	"float shutterclose" [0.001000000047497]
+	"float lensradius" [0.085000000000000]
+	"integer blades" [7]
+	"integer power" [1]
+	"string distribution" ["exponential"]
+	"float focaldistance" [9.399999618530273]
+
+Film "fleximage"
+	"float cropwindow" [0.000000000000000 1.000000000000000 1.000000000000000 0.000000000000000]
+	"integer xresolution" [2400]
+	"integer yresolution" [1600]
+	"float gamma" [2.200000000000000]
+	"float colorspace_white" [0.314275000000000 0.329411000000000]
+	"float colorspace_red" [0.630000000000000 0.340000000000000]
+	"float colorspace_green" [0.310000000000000 0.595000000000000]
+	"float colorspace_blue" [0.155000000000000 0.070000000000000]
+	"string cameraresponse" ["Max_Zoom_800CD"]
+	"string filename" ["cherub.Scene.00001"]
+	"bool write_resume_flm" ["false"]
+	"bool restart_resume_flm" ["false"]
+	"bool write_flm_direct" ["false"]
+	"bool write_exr_halftype" ["false"]
+	"bool write_exr_applyimaging" ["true"]
+	"bool write_exr_ZBuf" ["false"]
+	"string write_exr_compressiontype" ["PIZ (lossless)"]
+	"string write_exr_zbuf_normalizationtype" ["None"]
+	"bool write_exr" ["false"]
+	"string write_exr_channels" ["RGB"]
+	"bool write_png" ["true"]
+	"string write_png_channels" ["RGB"]
+	"bool write_png_16bit" ["false"]
+	"bool write_tga" ["false"]
+	"string write_tga_channels" ["RGB"]
+	"string ldr_clamp_method" ["cut"]
+	"integer displayinterval" [60]
+	"integer writeinterval" [180]
+	"integer flmwriteinterval" [900]
+	"integer haltspp" [10000]
+	"integer tilecount" [0]
+	"string tonemapkernel" ["linear"]
+	"float linear_sensitivity" [50.000000000000000]
+	"float linear_exposure" [0.001000000047497]
+	"float linear_fstop" [0.500000000000000]
+	"float linear_gamma" [2.200000000000000]
+	"bool vignetting_enabled" ["true"]
+	"float vignetting_scale" [0.400000005960464]
+
+WorldBegin
+
+Include "cherub/Scene/00001/LuxRender-Materials.lxm"
+
+Include "cherub/Scene/00001/LuxRender-Geometry.lxo"
+
+TransformBegin #  "hemi"
+
+Transform [-0.939692616462708 -0.342020153999329 0.000000000000000 0.000000000000000 0.342020153999329 -0.939692616462708 0.000000000000000 0.000000000000000 0.000000000000000 0.000000000000000 1.000000000000000 0.000000000000000 0.000000000000000 0.000000000000000 5.000000000000000 1.000000000000000]
+
+LightGroup "default"
+
+TransformBegin #  ""
+
+Scale -1.000000000000000 1.000000000000000 1.000000000000000
+
+LightSource "infinitesample"
+	"float gain" [2000.000000000000000]
+	"float importance" [1.000000000000000]
+	"string mapname" ["textures/papermill.hdr"]
+	"string mapping" ["latlong"]
+	"float gamma" [1.000000000000000]
+	"integer nsamples" [1]
+
+TransformEnd # ""
+
+TransformEnd # ""
+WorldEnd

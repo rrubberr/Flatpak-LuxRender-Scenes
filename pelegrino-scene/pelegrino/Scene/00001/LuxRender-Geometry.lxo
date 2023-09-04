@@ -1,0 +1,257 @@
+# Geometry File
+
+AttributeBegin #  "mirror"
+
+Transform [-0.000000034969112 -0.800000011920929 0.000000000000000 0.000000000000000 0.800000011920929 -0.000000034969112 0.000000000000000 0.000000000000000 0.000000000000000 0.000000000000000 0.800000011920929 0.000000000000000 0.000000000000000 0.000000000000000 0.000000000000000 1.000000000000000]
+
+NamedMaterial "mirror"
+
+Exterior  "air"
+
+Shape "plymesh"
+	"string filename" ["pelegrino/Scene/00001/mirror_0000_m000.ply"]
+	"bool generatetangents" ["false"]
+	"string name" ["mirror"]
+
+AttributeEnd # ""
+
+AttributeBegin #  "cap"
+
+Transform [-0.000437434937339 -0.199999511241913 0.000000000000000 0.000000000000000 -0.000000008742257 0.000000000019121 0.199999988079071 0.000000000000000 -0.199999511241913 0.000437434937339 -0.000000008742277 0.000000000000000 0.000161131378263 0.017603872343898 0.000269522890449 1.000000000000000]
+
+NamedMaterial "cap"
+
+Exterior  "air"
+
+Shape "plymesh"
+	"string filename" ["pelegrino/Scene/00001/cap_0000_m000.ply"]
+	"bool generatetangents" ["false"]
+	"string name" ["cap"]
+
+AttributeEnd # ""
+
+AttributeBegin #  "label"
+
+Transform [0.999980568885803 -0.006229832768440 0.000000000000000 0.000000000000000 0.006229832768440 0.999980568885803 0.000000000000000 0.000000000000000 0.000000000000000 0.000000000000000 1.000000000000000 0.000000000000000 0.000161131378263 0.017603872343898 0.000269522890449 1.000000000000000]
+
+NamedMaterial "label-mix"
+
+Exterior  "air"
+
+Shape "plymesh"
+	"string filename" ["pelegrino/Scene/00001/label_0000_m000.ply"]
+	"bool generatetangents" ["false"]
+	"string name" ["label"]
+
+AttributeEnd # ""
+
+AttributeBegin #  "bottle"
+
+Transform [0.199999511241913 -0.000437353533925 0.000000000000000 0.000000000000000 -0.000000000019117 -0.000000008742257 0.199999988079071 0.000000000000000 -0.000437353533925 -0.199999511241913 -0.000000008742277 0.000000000000000 0.000161131378263 0.017603872343898 0.000269522890449 1.000000000000000]
+
+NamedMaterial "plastic"
+
+Interior  "plastic"
+
+Exterior  "air"
+
+Shape "plymesh"
+	"string filename" ["pelegrino/Scene/00001/bottle_0000_m000.ply"]
+	"bool generatetangents" ["false"]
+	"string name" ["bottle"]
+
+AttributeEnd # ""
+
+AttributeBegin #  "water"
+
+Transform [0.201999515295029 -0.000441727082944 0.000000000000000 0.000000000000000 -0.000000000019309 -0.000000008829679 0.201999992132187 0.000000000000000 -0.000441727082944 -0.201999515295029 -0.000000008829701 0.000000000000000 0.000161131378263 0.017603872343898 0.000269522890449 1.000000000000000]
+
+NamedMaterial "Water"
+
+Interior  "water"
+
+Exterior  "air"
+
+Shape "plymesh"
+	"string filename" ["pelegrino/Scene/00001/water_0000_m000.ply"]
+	"bool generatetangents" ["false"]
+	"string name" ["water"]
+
+AttributeEnd # ""
+
+AttributeBegin #  "splash"
+
+Transform [0.164999976754189 0.000000000000000 0.000000000000000 0.000000000000000 0.000000000000000 -0.000000007212378 0.164999976754189 0.000000000000000 0.000000000000000 -0.164999976754189 -0.000000007212378 0.000000000000000 -0.000560817774385 0.017932388931513 0.000000000000000 1.000000000000000]
+
+NamedMaterial "Water"
+
+Interior  "water"
+
+Exterior  "air"
+
+Shape "plymesh"
+	"string filename" ["pelegrino/Scene/00001/splash_0000_m000.ply"]
+	"bool generatetangents" ["false"]
+	"string name" ["splash"]
+
+AttributeEnd # ""
+
+AttributeBegin #  "light1"
+
+Transform [0.100000023841858 -0.000000011920932 0.000000000000000 0.000000000000000 -0.000000000000002 -0.000000016292072 0.100000023841858 0.000000000000000 -0.000000011920932 -0.100000023841858 -0.000000016292072 0.000000000000000 -0.805180728435516 0.512942969799042 0.676264703273773 1.000000000000000]
+
+AttributeBegin #  ""
+
+NamedMaterial "matte"
+
+Exterior  "air"
+
+Shape "plymesh"
+	"string filename" ["pelegrino/Scene/00001/light1_0000_m000.ply"]
+	"bool generatetangents" ["false"]
+	"string name" ["light1"]
+
+AttributeEnd # ""
+
+AttributeBegin #  ""
+
+NamedMaterial "emission-rear"
+
+AreaLightSource "area"
+	"float importance" [1.000000000000000]
+	"float gain" [1.799999952316284]
+	"float power" [60.000000000000000]
+	"float efficacy" [17.000000000000000]
+	"integer nsamples" [1]
+	"color L" [1.00000000 1.00000000 1.00000000]
+
+Exterior  "air"
+
+Shape "plymesh"
+	"string filename" ["pelegrino/Scene/00001/light1_0000_m001.ply"]
+	"bool generatetangents" ["false"]
+	"string name" ["light1"]
+
+AttributeEnd # ""
+
+AttributeEnd # ""
+
+AttributeBegin #  "light2"
+
+Transform [0.100000023841858 -0.000000011920932 0.000000000000000 0.000000000000000 -0.000000000000002 -0.000000016292072 0.100000023841858 0.000000000000000 -0.000000011920932 -0.100000023841858 -0.000000016292072 0.000000000000000 0.801217734813690 0.530688643455505 0.676264703273773 1.000000000000000]
+
+AttributeBegin #  ""
+
+NamedMaterial "matte"
+
+Exterior  "air"
+
+Shape "plymesh"
+	"string filename" ["pelegrino/Scene/00001/light2_0000_m000.ply"]
+	"bool generatetangents" ["false"]
+	"string name" ["light2"]
+
+AttributeEnd # ""
+
+AttributeBegin #  ""
+
+NamedMaterial "emission-rear"
+
+AreaLightSource "area"
+	"float importance" [1.000000000000000]
+	"float gain" [1.799999952316284]
+	"float power" [60.000000000000000]
+	"float efficacy" [17.000000000000000]
+	"integer nsamples" [1]
+	"color L" [1.00000000 1.00000000 1.00000000]
+
+Exterior  "air"
+
+Shape "plymesh"
+	"string filename" ["pelegrino/Scene/00001/light2_0000_m001.ply"]
+	"bool generatetangents" ["false"]
+	"string name" ["light2"]
+
+AttributeEnd # ""
+
+AttributeEnd # ""
+
+AttributeBegin #  "light3"
+
+Transform [0.100000023841858 -0.000000011920932 0.000000000000000 0.000000000000000 -0.000000000000002 -0.000000016292072 0.100000023841858 0.000000000000000 -0.000000011920932 -0.100000023841858 -0.000000016292072 0.000000000000000 -0.519309401512146 -0.663892149925232 0.394821494817734 1.000000000000000]
+
+AttributeBegin #  ""
+
+NamedMaterial "matte"
+
+Exterior  "air"
+
+Shape "plymesh"
+	"string filename" ["pelegrino/Scene/00001/light3_0000_m000.ply"]
+	"bool generatetangents" ["false"]
+	"string name" ["light3"]
+
+AttributeEnd # ""
+
+AttributeBegin #  ""
+
+NamedMaterial "emission-rfont"
+
+AreaLightSource "area"
+	"float importance" [1.000000000000000]
+	"float gain" [2.200000047683716]
+	"float power" [60.000000000000000]
+	"float efficacy" [17.000000000000000]
+	"integer nsamples" [1]
+	"color L" [1.00000000 1.00000000 1.00000000]
+
+Exterior  "air"
+
+Shape "plymesh"
+	"string filename" ["pelegrino/Scene/00001/light3_0000_m001.ply"]
+	"bool generatetangents" ["false"]
+	"string name" ["light3"]
+
+AttributeEnd # ""
+
+AttributeEnd # ""
+
+AttributeBegin #  "light4"
+
+Transform [0.100000023841858 -0.000000011920932 0.000000000000000 0.000000000000000 -0.000000000000002 -0.000000016292072 0.100000023841858 0.000000000000000 -0.000000011920932 -0.100000023841858 -0.000000016292072 0.000000000000000 0.000629738671705 -0.003749191761017 1.205856680870056 1.000000000000000]
+
+AttributeBegin #  ""
+
+NamedMaterial "matte"
+
+Exterior  "air"
+
+Shape "plymesh"
+	"string filename" ["pelegrino/Scene/00001/light4_0000_m000.ply"]
+	"bool generatetangents" ["false"]
+	"string name" ["light4"]
+
+AttributeEnd # ""
+
+AttributeBegin #  ""
+
+NamedMaterial "emission-top"
+
+AreaLightSource "area"
+	"float importance" [1.000000000000000]
+	"float gain" [1.200000047683716]
+	"float power" [60.000000000000000]
+	"float efficacy" [17.000000000000000]
+	"integer nsamples" [1]
+	"color L" [1.00000000 1.00000000 1.00000000]
+
+Exterior  "air"
+
+Shape "plymesh"
+	"string filename" ["pelegrino/Scene/00001/light4_0000_m001.ply"]
+	"bool generatetangents" ["false"]
+	"string name" ["light4"]
+
+AttributeEnd # ""
+
+AttributeEnd # ""

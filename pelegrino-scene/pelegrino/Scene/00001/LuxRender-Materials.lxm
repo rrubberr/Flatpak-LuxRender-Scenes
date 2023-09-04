@@ -1,0 +1,140 @@
+# Materials File
+
+MakeNamedVolume "air" "clear"
+	"float fresnel" [1.000292658805847]
+	"color absorption" [0.00000000 0.00000000 0.00000000]
+
+MakeNamedVolume "plastic" "clear"
+	"float fresnel" [1.460000038146973]
+	"color absorption" [261.40280020 114.39858959 241.93265791]
+
+MakeNamedVolume "water" "clear"
+	"float fresnel" [1.332829952239990]
+	"color absorption" [0.00000000 0.00000000 0.00000000]
+
+MakeNamedVolume "glass" "clear"
+	"float fresnel" [1.519999980926514]
+	"color absorption" [0.00000000 0.00000000 0.00000000]
+
+MakeNamedMaterial "mirror"
+	"float film" [0.000000000000000]
+	"float filmindex" [1.333299994468689]
+	"color Kr" [0.31854680 0.31854680 0.31854680]
+	"string type" ["mirror"]
+
+MakeNamedMaterial "cap"
+	"bool multibounce" ["true"]
+	"bool separable" ["true"]
+	"color Kd" [0.60382742 0.60382742 0.60382742]
+	"color Ks" [0.04000000 0.04000000 0.04000000]
+	"float index" [0.000000000000000]
+	"float uroughness" [0.225000008940697]
+	"float vroughness" [0.225000008940697]
+	"float sigma" [20.000000000000000]
+	"string type" ["glossy"]
+
+Texture "bottle-normal.tif" "float" "normalmap"
+	"string filename" ["textures/bottle-normal.tif"]
+	"string filtertype" ["bilinear"]
+	"float gamma" [1.000000000000000]
+	"string mapping" ["uv"]
+	"float uscale" [1.000000000000000]
+	"float vscale" [-1.000000000000000]
+	"float udelta" [0.000000000000000]
+	"float vdelta" [1.000000000000000]
+
+Texture "bottle-normal.tif_scaled" "float" "scale"
+	"float tex1" [0.500000000000000]
+	"texture tex2" ["bottle-normal.tif"]
+
+Texture "bottle-diffuse.tif_color" "color" "imagemap"
+	"string filename" ["textures/bottle-diffuse.tif"]
+	"integer discardmipmaps" [0]
+	"float gain" [1.000000000000000]
+	"float gamma" [2.200000047683716]
+	"float maxanisotropy" [8.000000000000000]
+	"string wrap" ["repeat"]
+	"string mapping" ["uv"]
+	"float uscale" [1.000000000000000]
+	"float vscale" [-1.000000000000000]
+	"float udelta" [0.000000000000000]
+	"float vdelta" [1.000000000000000]
+
+Texture "bottle-diffuse.tif_color_scaled_1" "color" "scale"
+	"color tex1" [0.63999999 0.63999999 0.63999999]
+	"texture tex2" ["bottle-diffuse.tif_color"]
+
+MakeNamedMaterial "label-glossy"
+	"texture bumpmap" ["bottle-normal.tif_scaled"]
+	"bool multibounce" ["false"]
+	"bool separable" ["true"]
+	"texture Kd" ["bottle-diffuse.tif_color_scaled_1"]
+	"color Ks" [0.04000000 0.04000000 0.04000000]
+	"float index" [0.000000000000000]
+	"float uroughness" [0.075000002980232]
+	"float vroughness" [0.075000002980232]
+	"float sigma" [2.000000000000000]
+	"string type" ["glossy"]
+
+Texture "bottle-diffuse.tif_color_scaled_2" "color" "scale"
+	"color tex1" [0.69999999 0.69999999 0.69999999]
+	"texture tex2" ["bottle-diffuse.tif_color"]
+
+Texture "label-metal_nk" "fresnel" "fresnelcolor"
+	"texture Kr" ["bottle-diffuse.tif_color_scaled_2"]
+
+MakeNamedMaterial "label-metal"
+	"texture bumpmap" ["bottle-normal.tif_scaled"]
+	"float uroughness" [0.195000007748604]
+	"float vroughness" [0.314999997615814]
+	"texture fresnel" ["label-metal_nk"]
+	"string type" ["metal2"]
+
+Texture "bottle-metallic.tif_float" "float" "imagemap"
+	"string filename" ["textures/bottle-metallic.tif"]
+	"integer discardmipmaps" [0]
+	"float gain" [1.000000000000000]
+	"float gamma" [2.200000047683716]
+	"float maxanisotropy" [8.000000000000000]
+	"string wrap" ["repeat"]
+	"string mapping" ["uv"]
+	"float uscale" [1.000000000000000]
+	"float vscale" [-1.000000000000000]
+	"float udelta" [0.000000000000000]
+	"float vdelta" [1.000000000000000]
+
+MakeNamedMaterial "label-mix"
+	"string namedmaterial1" ["label-glossy"]
+	"string namedmaterial2" ["label-metal"]
+	"texture amount" ["bottle-metallic.tif_float"]
+	"string type" ["mix"]
+
+MakeNamedMaterial "plastic"
+	"bool architectural" ["false"]
+	"bool dispersion" ["false"]
+	"string type" ["glass2"]
+
+MakeNamedMaterial "Water"
+	"bool architectural" ["false"]
+	"bool dispersion" ["false"]
+	"string type" ["glass2"]
+
+MakeNamedMaterial "matte"
+	"color Kd" [0.00000000 0.00000000 0.00000000]
+	"float sigma" [0.000000000000000]
+	"string type" ["matte"]
+
+MakeNamedMaterial "emission-rear"
+	"color Kd" [0.63999999 0.63999999 0.63999999]
+	"float sigma" [0.000000000000000]
+	"string type" ["matte"]
+
+MakeNamedMaterial "emission-rfont"
+	"color Kd" [0.63999999 0.63999999 0.63999999]
+	"float sigma" [0.000000000000000]
+	"string type" ["matte"]
+
+MakeNamedMaterial "emission-top"
+	"color Kd" [0.63999999 0.63999999 0.63999999]
+	"float sigma" [0.000000000000000]
+	"string type" ["matte"]
