@@ -12,10 +12,10 @@ SurfaceIntegrator "bidirectional"
 	"integer eyedepth" [48]
 	"integer lightdepth" [48]
 	"integer lightraycount" [1]
-	"string lightpathstrategy" ["logpowerimp"]
-	"string lightstrategy" ["logpowerimp"]
+	"string lightpathstrategy" ["auto"]
+	"string lightstrategy" ["auto"]
 
-VolumeIntegrator "multi"
+VolumeIntegrator "single"
 
 PixelFilter "gaussian"
 	"float xwidth" [4.000000000000000]
@@ -56,14 +56,14 @@ Film "fleximage"
 	"bool write_tga" ["false"]
 	"string write_tga_channels" ["RGB"]
 	"string ldr_clamp_method" ["cut"]
-	"integer displayinterval" [60]
+	"integer displayinterval" [20]
 	"integer writeinterval" [360]
 	"integer flmwriteinterval" [720]
 	"integer haltspp" [10000]
-	"integer outlierrejection_k" [1]
+	"integer outlierrejection_k" [2]
 	"integer tilecount" [0]
 	"string tonemapkernel" ["linear"]
-	"float linear_sensitivity" [50.000000000000000]
+	"float linear_sensitivity" [64.000000000000000]
 	"float linear_exposure" [0.250000000000000]
 	"float linear_fstop" [5.599999904632568]
 	"float linear_gamma" [2.200000000000000]
