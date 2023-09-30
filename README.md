@@ -1,4 +1,4 @@
-# LuxRender 1.7 Flatpak Test Scenes
+# LuxRender Flatpak Test Scenes
 
 This repository provides a number of test scenes for LuxRender. Each scene includes the blend file, as well as an lxs scene that can be immediately loaded into LuxRender.
 
